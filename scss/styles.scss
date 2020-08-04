@@ -1,10 +1,10 @@
-$break-phone: 320px;
-$break-tablet: 850px;
-$break-desktop: 1200px;
-$break-desktop-2: 1500px;
-$break-desktop-3: 2000px;
+$break-phone: 375px;
+$break-tablet: 1024px;
+$break-desktop: 1440px;
+$break-desktop-2: 2560px;
 
 $gray: #E5E6E6;
+$black: #1A1A1A;
 
 //fonts
 @font-face {
@@ -19,7 +19,7 @@ $gray: #E5E6E6;
 
 body{
     background-color: $gray;
-    color: black;
+    color: $black;
     font-family: "Roobert-Medium", "Helvetica", sans-serif;
     font-weight: normal;
     font-style: normal;
@@ -27,67 +27,60 @@ body{
 }
 
 a{
-    color: black;
+    color: $black;
     text-decoration: none;
     transition: color .3s ease-in-out;
     &:hover{
         text-decoration: none;
-        color: white;
+        color: $black;
     }
 }
 
 h1{
-    font-size: 35px;
+    font-style: normal;
     font-weight: normal;
+    font-size: 38px;
+    line-height: 120%;
     @media screen and (min-width: $break-tablet) {
-    font-size: 80px;
+        font-size: 60px;
+        line-height: 115%;
   }
     @media screen and (min-width: $break-desktop) {
-    font-size: 100px;
+        font-size: 84px;
+        line-height: 110%;
   }
-}
-
-h2{
-    font-size: 12px;
-    font-weight: normal;
-    @media screen and (min-width: $break-tablet) {
-    font-size: 16px;
-  }
-    @media screen and (min-width: $break-desktop) {
-    font-size: 18px;
+    @media screen and (min-width: $break-desktop-2) {
+        font-size: 96px;
   }
 }
 
 h3{
-    font-size: 10px;
+    font-style: normal;
     font-weight: normal;
+    font-size: 20px;
+    line-height: 125%;
     @media screen and (min-width: $break-tablet) {
-    font-size: 12px;
+        font-size: 24px;
+        line-height: 125%;
   }
     @media screen and (min-width: $break-desktop) {
-    font-size: 16px;
+        font-size: 28px;
+        line-height: 120%;
   }
 }
 
-h4{
-    font-size: 40px;
-    font-weight: normal;
-    @media screen and (min-width: $break-tablet) {
-    font-size: 12px;
-  }
-    @media screen and (min-width: $break-desktop) {
-    font-size: 16px;
-  }
-}
 
 p{
-    font-size: 12px;
+    font-style: normal;
     font-weight: normal;
+    font-size: 12px;
+    line-height: 130%;
     @media screen and (min-width: $break-tablet) {
-    font-size: 14px;
+        font-size: 14px;
+        line-height: 125%;
   }
     @media screen and (min-width: $break-desktop) {
-    font-size: 16px;
+        font-size: 16px;
   }
 }
 
@@ -97,16 +90,27 @@ img{
 
 //classes
 
-.category-title{
-    line-height: 1.2;
-    width: 30%;
-    @media screen and (min-width: $break-tablet) {
-        font-size: 50px;
-        width: 25%;
-  }
-    @media screen and (min-width: $break-desktop) {
-        width: 20%;
-  }
+a.left
+{
+  position: relative;
+  text-decoration: none;
+}
+
+a.left:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: $black;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+a.left:hover:before {
+  visibility: visible;
+  width: 100%;
 }
 
 .feature{
@@ -123,10 +127,7 @@ img{
 }
 
 //menu
-.caps{
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-}
+
 .menu{
     align-items: baseline;
     background-color: $gray;
@@ -178,7 +179,7 @@ img{
 //draw
 path {
 	fill: none;
-	stroke: black;
+	stroke: $black;
 }
 
 #letters {
