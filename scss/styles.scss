@@ -1,10 +1,11 @@
 $break-phone: 375px;
-$break-tablet: 1024px;
+$break-tablet: 720px;
 $break-desktop: 1440px;
-$break-desktop-2: 2560px;
+$break-desktop-2: 2260px;
 
 $gray: #E5E6E6;
 $black: #1A1A1A;
+$gray-mid: #6E6E6E;
 
 //fonts
 @font-face {
@@ -24,6 +25,7 @@ body{
     font-weight: normal;
     font-style: normal;
     text-rendering: optimizeLegibility;
+    margin: 0;
 }
 
 a{
@@ -34,6 +36,21 @@ a{
         text-decoration: none;
         color: $black;
     }
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 130%;
+    margin: 0;
+    @media screen and (min-width: $break-tablet) {
+        font-size: 14px;
+        line-height: 125%;
+  }
+    @media screen and (min-width: $break-desktop) {
+        font-size: 16px;
+  }
+    @media screen and (min-width: $break-desktop-2) {
+        max-width: 70%;
+  }
 }
 
 h1{
@@ -41,6 +58,7 @@ h1{
     font-weight: normal;
     font-size: 38px;
     line-height: 120%;
+    margin: 0;
     @media screen and (min-width: $break-tablet) {
         font-size: 60px;
         line-height: 115%;
@@ -51,6 +69,7 @@ h1{
   }
     @media screen and (min-width: $break-desktop-2) {
         font-size: 96px;
+        max-width: 70%;
   }
 }
 
@@ -59,6 +78,7 @@ h3{
     font-weight: normal;
     font-size: 20px;
     line-height: 125%;
+    margin: 0;
     @media screen and (min-width: $break-tablet) {
         font-size: 24px;
         line-height: 125%;
@@ -66,6 +86,9 @@ h3{
     @media screen and (min-width: $break-desktop) {
         font-size: 28px;
         line-height: 120%;
+  }
+    @media screen and (min-width: $break-desktop-2) {
+        max-width: 70%;
   }
 }
 
@@ -75,6 +98,7 @@ p{
     font-weight: normal;
     font-size: 12px;
     line-height: 130%;
+    margin: 0;
     @media screen and (min-width: $break-tablet) {
         font-size: 14px;
         line-height: 125%;
@@ -82,48 +106,145 @@ p{
     @media screen and (min-width: $break-desktop) {
         font-size: 16px;
   }
+    @media screen and (min-width: $break-desktop-2) {
+        max-width: 70%;
+  }
 }
 
 img{
     max-width: 100%;
 }
 
-//classes
+//links and buttons
 
-a.left
+a.underline-link
 {
-  position: relative;
-  text-decoration: none;
+    position: relative;
+    text-decoration: none;
 }
 
-a.left:before {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: $black;
-  visibility: hidden;
-  transition: all 0.3s ease-in-out;
+a.underline-link:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: $black;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: -3px;
+    @media screen and (min-width: $break-tablet) {
+        height: 1.25px;
+        margin-bottom: -3.25px;
+  }
 }
 
-a.left:hover:before {
-  visibility: visible;
-  width: 100%;
+a.underline-link:hover:before {
+    visibility: visible;
+    width: 100%;
 }
 
-.feature{
-    padding: 0 20px 0 20px;
+/*i know that this all transition is creating issues when resizing browser - come back later*/
+a.text-link {
+    padding-bottom: 2px;
+    border-bottom: 1px solid $black;
+    transition: all 0.2s ease-in-out;
+    @media screen and (min-width: $break-tablet) {
+        border-bottom: 1.25px solid $black;
+  }
 }
 
-.feature-info{
-    align-items: baseline;
-    display: flex;
+a.text-link:hover {
+    color: $gray-mid;
+    border-bottom: 1px solid $gray-mid;
+    @media screen and (min-width: $break-tablet) {
+        border-bottom: 1.25px solid $gray-mid;
+  }
 }
 
-.work-list{
-    display: flex;
+.underline {
+    display: inline-block;
+    padding-bottom: 1px;
+    border-bottom: 1px solid $black;
+    @media screen and (min-width: $break-tablet) {
+        padding-bottom: 1.25px;
+        border-bottom: 1.25px solid $black;
+  }
+    @media screen and (min-width: $break-desktop) {
+        padding-bottom: 1px;
+  }
+}
+
+.button {
+    display: inline-block;
+    border: 1px solid $black;
+    padding: 8px 30px 10px 30px;
+    border-radius: 30px;
+    transition: all 0.2s ease-in-out;
+}
+
+.button:hover {
+    border: 1px solid $black;
+    background-color: $black;
+    border-radius: 30px;
+    color: $gray;
+}
+
+//layout
+.grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 24px;
+    margin: 0 24px 0 24px;
+    @media screen and (min-width: $break-tablet) {
+        grid-template-columns: repeat(12, 1fr);
+        column-gap: 32px;
+        margin: 0 32px 0 32px;
+  }
+    @media screen and (min-width: $break-desktop) {
+        grid-template-columns: repeat(12, 1fr);
+        column-gap: 48px;
+        margin: 0 48px 0 48px;
+  }
+    @media screen and (min-width: $break-desktop-2) {
+        grid-template-columns: repeat(12, 1fr);
+        column-gap: 60px;
+        margin: 0 60px 0 60px;
+  }
+}
+
+.left-column {
+    grid-column: 1 / 7;
+    @media screen and (min-width: $break-tablet) {
+        grid-column: 1 / 7;
+  }
+    @media screen and (min-width: $break-desktop) {
+        grid-column: 1 / 7;
+  }
+    @media screen and (min-width: $break-desktop-2) {
+        grid-column: 1 / 7;
+  }
+}
+
+.right-column {
+    grid-column: 1 / 7;
+    @media screen and (min-width: $break-tablet) {
+        grid-column: 7 / 13;
+  }
+    @media screen and (min-width: $break-desktop) {
+        grid-column: 7 / 13;
+  }
+    @media screen and (min-width: $break-desktop-2) {
+        grid-column: 7 / 13;
+  }
+}
+
+.box {
+    background-color: blue;
+    height: 60vh;
+    width: auto;
+    opacity: .1;
 }
 
 //menu
@@ -158,23 +279,6 @@ a.left:hover:before {
   }
     
 }
-
-/*
-.container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-}
-
-.contact{
-    width: 60%;
-    margin-top: 300px;
-    @media screen and (min-width: $break-tablet) {
-    width: 100%;
-  }
-}
-*/
 
 //draw
 path {

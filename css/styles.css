@@ -10,6 +10,7 @@ body {
   font-weight: normal;
   font-style: normal;
   text-rendering: optimizeLegibility;
+  margin: 0;
 }
 
 a {
@@ -18,10 +19,31 @@ a {
   -webkit-transition: color 0.3s ease-in-out;
   -o-transition: color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 130%;
+  margin: 0;
 }
 a:hover {
   text-decoration: none;
   color: #1A1A1A;
+}
+@media screen and (min-width: 720px) {
+  a {
+    font-size: 14px;
+    line-height: 125%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  a {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 2260px) {
+  a {
+    max-width: 70%;
+  }
 }
 
 h1 {
@@ -29,8 +51,9 @@ h1 {
   font-weight: normal;
   font-size: 38px;
   line-height: 120%;
+  margin: 0;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 720px) {
   h1 {
     font-size: 60px;
     line-height: 115%;
@@ -42,9 +65,10 @@ h1 {
     line-height: 110%;
   }
 }
-@media screen and (min-width: 2560px) {
+@media screen and (min-width: 2260px) {
   h1 {
     font-size: 96px;
+    max-width: 70%;
   }
 }
 
@@ -53,8 +77,9 @@ h3 {
   font-weight: normal;
   font-size: 20px;
   line-height: 125%;
+  margin: 0;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 720px) {
   h3 {
     font-size: 24px;
     line-height: 125%;
@@ -66,14 +91,20 @@ h3 {
     line-height: 120%;
   }
 }
+@media screen and (min-width: 2260px) {
+  h3 {
+    max-width: 70%;
+  }
+}
 
 p {
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
   line-height: 130%;
+  margin: 0;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 720px) {
   p {
     font-size: 14px;
     line-height: 125%;
@@ -84,21 +115,26 @@ p {
     font-size: 16px;
   }
 }
+@media screen and (min-width: 2260px) {
+  p {
+    max-width: 70%;
+  }
+}
 
 img {
   max-width: 100%;
 }
 
-a.left {
+a.underline-link {
   position: relative;
   text-decoration: none;
 }
 
-a.left:before {
+a.underline-link:before {
   content: "";
   position: absolute;
   width: 0;
-  height: 2px;
+  height: 1px;
   bottom: 0;
   left: 0;
   background-color: #1A1A1A;
@@ -106,30 +142,178 @@ a.left:before {
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  margin-bottom: -3px;
+}
+@media screen and (min-width: 720px) {
+  a.underline-link:before {
+    height: 1.25px;
+    margin-bottom: -3.25px;
+  }
 }
 
-a.left:hover:before {
+a.underline-link:hover:before {
   visibility: visible;
   width: 100%;
 }
 
-.feature {
-  padding: 0 20px 0 20px;
+/*i know that this all transition is creating issues when resizing browser - come back later*/
+a.text-link {
+  padding-bottom: 2px;
+  border-bottom: 1px solid #1A1A1A;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+@media screen and (min-width: 720px) {
+  a.text-link {
+    border-bottom: 1.25px solid #1A1A1A;
+  }
 }
 
-.feature-info {
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+a.text-link:hover {
+  color: #6E6E6E;
+  border-bottom: 1px solid #6E6E6E;
+}
+@media screen and (min-width: 720px) {
+  a.text-link:hover {
+    border-bottom: 1.25px solid #6E6E6E;
+  }
 }
 
-.work-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.underline {
+  display: inline-block;
+  padding-bottom: 1px;
+  border-bottom: 1px solid #1A1A1A;
+}
+@media screen and (min-width: 720px) {
+  .underline {
+    padding-bottom: 1.25px;
+    border-bottom: 1.25px solid #1A1A1A;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .underline {
+    padding-bottom: 1px;
+  }
+}
+
+.button {
+  display: inline-block;
+  border: 1px solid #1A1A1A;
+  padding: 8px 30px 10px 30px;
+  border-radius: 30px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.button:hover {
+  border: 1px solid #1A1A1A;
+  background-color: #1A1A1A;
+  border-radius: 30px;
+  color: #E5E6E6;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 24px 1fr 24px 1fr 24px 1fr 24px 1fr 24px 1fr;
+  grid-template-columns: repeat(6, 1fr);
+  -webkit-column-gap: 24px;
+     -moz-column-gap: 24px;
+          column-gap: 24px;
+  margin: 0 24px 0 24px;
+}
+@media screen and (min-width: 720px) {
+  .grid {
+    -ms-grid-columns: 1fr 32px 1fr 32px 1fr 32px 1fr 32px 1fr 32px 1fr 32px 1fr 32px 1fr 32px 1fr 32px 1fr 32px 1fr 32px 1fr;
+    grid-template-columns: repeat(12, 1fr);
+    -webkit-column-gap: 32px;
+       -moz-column-gap: 32px;
+            column-gap: 32px;
+    margin: 0 32px 0 32px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .grid {
+    -ms-grid-columns: 1fr 48px 1fr 48px 1fr 48px 1fr 48px 1fr 48px 1fr 48px 1fr 48px 1fr 48px 1fr 48px 1fr 48px 1fr 48px 1fr;
+    grid-template-columns: repeat(12, 1fr);
+    -webkit-column-gap: 48px;
+       -moz-column-gap: 48px;
+            column-gap: 48px;
+    margin: 0 48px 0 48px;
+  }
+}
+@media screen and (min-width: 2260px) {
+  .grid {
+    -ms-grid-columns: 1fr 60px 1fr 60px 1fr 60px 1fr 60px 1fr 60px 1fr 60px 1fr 60px 1fr 60px 1fr 60px 1fr 60px 1fr 60px 1fr;
+    grid-template-columns: repeat(12, 1fr);
+    -webkit-column-gap: 60px;
+       -moz-column-gap: 60px;
+            column-gap: 60px;
+    margin: 0 60px 0 60px;
+  }
+}
+
+.left-column {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 6;
+  grid-column: 1/7;
+}
+@media screen and (min-width: 720px) {
+  .left-column {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 6;
+    grid-column: 1/7;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .left-column {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 6;
+    grid-column: 1/7;
+  }
+}
+@media screen and (min-width: 2260px) {
+  .left-column {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 6;
+    grid-column: 1/7;
+  }
+}
+
+.right-column {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 6;
+  grid-column: 1/7;
+}
+@media screen and (min-width: 720px) {
+  .right-column {
+    -ms-grid-column: 7;
+    -ms-grid-column-span: 6;
+    grid-column: 7/13;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .right-column {
+    -ms-grid-column: 7;
+    -ms-grid-column-span: 6;
+    grid-column: 7/13;
+  }
+}
+@media screen and (min-width: 2260px) {
+  .right-column {
+    -ms-grid-column: 7;
+    -ms-grid-column-span: 6;
+    grid-column: 7/13;
+  }
+}
+
+.box {
+  background-color: blue;
+  height: 60vh;
+  width: auto;
+  opacity: 0.1;
 }
 
 .menu {
@@ -169,7 +353,7 @@ a.left:hover:before {
 .menu-item {
   padding-left: 80px;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 720px) {
   .menu-item {
     padding-left: 100px;
   }
@@ -180,22 +364,6 @@ a.left:hover:before {
   }
 }
 
-/*
-.container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-}
-
-.contact{
-    width: 60%;
-    margin-top: 300px;
-    @media screen and (min-width: $break-tablet) {
-    width: 100%;
-  }
-}
-*/
 path {
   fill: none;
   stroke: #1A1A1A;
