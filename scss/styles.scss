@@ -38,18 +38,15 @@ a{
     }
     font-style: normal;
     font-weight: normal;
-    font-size: 12px;
-    line-height: 130%;
+    font-size: 14px;
+    line-height: 150%;
     margin: 0;
     @media screen and (min-width: $break-tablet) {
-        font-size: 14px;
-        line-height: 125%;
+        font-size: 16px;
+        line-height: 140%;
   }
     @media screen and (min-width: $break-desktop) {
-        font-size: 16px;
-  }
-    @media screen and (min-width: $break-desktop-2) {
-        max-width: 70%;
+        font-size: 18px;
   }
 }
 
@@ -76,15 +73,15 @@ h3{
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
-    line-height: 125%;
+    line-height: 130%;
     margin: 0;
     @media screen and (min-width: $break-tablet) {
         font-size: 24px;
-        line-height: 125%;
+        //line-height: 125%;
   }
     @media screen and (min-width: $break-desktop) {
         font-size: 28px;
-        line-height: 120%;
+        //line-height: 120%;
   }
 }
 
@@ -92,15 +89,15 @@ h3{
 p{
     font-style: normal;
     font-weight: normal;
-    font-size: 12px;
-    line-height: 130%;
+    font-size: 14px;
+    line-height: 150%;
     margin: 0;
     @media screen and (min-width: $break-tablet) {
-        font-size: 14px;
-        line-height: 125%;
+        font-size: 16px;
+        line-height: 140%;
   }
     @media screen and (min-width: $break-desktop) {
-        font-size: 16px;
+        font-size: 18px;
   }
 }
 

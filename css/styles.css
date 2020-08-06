@@ -21,8 +21,8 @@ a {
   transition: color 0.3s ease-in-out;
   font-style: normal;
   font-weight: normal;
-  font-size: 12px;
-  line-height: 130%;
+  font-size: 14px;
+  line-height: 150%;
   margin: 0;
 }
 a:hover {
@@ -31,18 +31,13 @@ a:hover {
 }
 @media screen and (min-width: 720px) {
   a {
-    font-size: 14px;
-    line-height: 125%;
+    font-size: 16px;
+    line-height: 140%;
   }
 }
 @media screen and (min-width: 1440px) {
   a {
-    font-size: 16px;
-  }
-}
-@media screen and (min-width: 2260px) {
-  a {
-    max-width: 70%;
+    font-size: 18px;
   }
 }
 
@@ -75,38 +70,36 @@ h3 {
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
-  line-height: 125%;
+  line-height: 130%;
   margin: 0;
 }
 @media screen and (min-width: 720px) {
   h3 {
     font-size: 24px;
-    line-height: 125%;
   }
 }
 @media screen and (min-width: 1440px) {
   h3 {
     font-size: 28px;
-    line-height: 120%;
   }
 }
 
 p {
   font-style: normal;
   font-weight: normal;
-  font-size: 12px;
-  line-height: 130%;
+  font-size: 14px;
+  line-height: 150%;
   margin: 0;
 }
 @media screen and (min-width: 720px) {
   p {
-    font-size: 14px;
-    line-height: 125%;
+    font-size: 16px;
+    line-height: 140%;
   }
 }
 @media screen and (min-width: 1440px) {
   p {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 
