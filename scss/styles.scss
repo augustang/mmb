@@ -116,6 +116,14 @@ hr {
   }
 }
 
+figcaption {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 150%;
+    margin: 8px 0 0 0;
+}
+
 //links and buttons
 
 a.underline-link
@@ -152,7 +160,7 @@ a.text-link {
     border-bottom: 1px solid $black;
     transition: all 0.2s ease-in-out;
     @media screen and (min-width: $break-tablet) {
-        border-bottom: 1.25px solid $black;
+        border-bottom: 1px solid $black;
   }
 }
 
@@ -160,21 +168,13 @@ a.text-link:hover {
     color: $gray-mid;
     border-bottom: 1px solid $gray-mid;
     @media screen and (min-width: $break-tablet) {
-        border-bottom: 1.25px solid $gray-mid;
+        border-bottom: 1px solid $gray-mid;
   }
 }
 
 .underline {
     display: inline-block;
-    padding-bottom: 1px;
     border-bottom: 1px solid $black;
-    @media screen and (min-width: $break-tablet) {
-        padding-bottom: 1.25px;
-        border-bottom: 1.25px solid $black;
-  }
-    @media screen and (min-width: $break-desktop) {
-        padding-bottom: 1px;
-  }
 }
 
 .button {
@@ -190,6 +190,14 @@ a.text-link:hover {
     background-color: $black;
     border-radius: 30px;
     color: $gray;
+}
+
+.arrow-down {
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+    z-index: 10;
+    margin-top: -50vh;
 }
 
 //layout
@@ -253,6 +261,106 @@ a.text-link:hover {
     width: auto;
     opacity: .1;
 }
+
+//homepage
+.drawing-instructions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    bottom: 24px;
+    p {
+       //color: $gray-mid; 
+    }
+}
+
+.cover {
+    figure {
+        margin-top: 8px;
+    }
+}
+
+.project-link-1 {
+    grid-column: 1 / 7;
+    @media screen and (min-width: $break-tablet) {
+        grid-column: 7 / 13;
+  }
+}
+
+//detail page
+.project-spacing {
+    grid-row-gap: 60px;
+    margin-top: 60px;
+    
+    @media screen and (min-width: $break-tablet) {
+        grid-row-gap: 72px;
+        margin-top: 72px;
+  }
+    @media screen and (min-width: $break-desktop) {
+        grid-row-gap: 96px;
+        margin-top: 96px;
+  }
+    @media screen and (min-width: $break-desktop) {
+        grid-row-gap: 112px;
+        margin-top: 112px;
+  }
+}
+
+.project-spacing-2 {
+    grid-row-gap: 60px;
+    margin-top: 60px;
+    
+    @media screen and (min-width: $break-tablet) {
+        grid-row-gap: 192px;
+        margin-top: 192px;
+  }
+}
+
+.landscape-1 {
+    grid-column: 1 / 7;
+    @media screen and (min-width: $break-tablet) {
+        grid-column: 1 / 11;
+  }
+}
+
+.landscape-2 {
+    grid-column: 1 / 7;
+    @media screen and (min-width: $break-tablet) {
+        grid-column: 3 / 13;
+  }
+}
+
+.portrait-1 {
+    grid-column: 1 / 7;
+    @media screen and (min-width: $break-tablet) {
+        grid-column: 1 / 5;
+  }
+}
+
+.portrait-2 {
+    grid-column: 1 / 7;
+    @media screen and (min-width: $break-tablet) {
+        grid-column: 7 / 11;
+        margin-top: 192px;
+  }
+}
+
+.portrait-3 {
+    grid-column: 1 / 7;
+    @media screen and (min-width: $break-tablet) {
+        grid-column: 3 / 7;
+  }
+}
+
+.portrait-4 {
+    grid-column: 1 / 7;
+    @media screen and (min-width: $break-tablet) {
+        grid-column: 9 / 13;
+        margin-top: 192px;
+  }
+}
+
 
 //menu
 
