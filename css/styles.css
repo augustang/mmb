@@ -810,3 +810,62 @@ iframe {
   top: 0;
   right: 0;
 }
+
+.dark {
+  background-color: #1A1A1A;
+  color: #E5E6E6;
+}
+.dark a {
+  color: #E5E6E6;
+}
+.dark a:hover {
+  color: #E5E6E6;
+}
+.dark a.underline-link:before {
+  background-color: #E5E6E6;
+}
+.dark a.text-link {
+  padding-bottom: 2px;
+  border-bottom: 1px solid #E5E6E6;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+@media screen and (min-width: 720px) {
+  .dark a.text-link {
+    border-bottom: 1px solid #E5E6E6;
+  }
+}
+.dark a.text-link:hover {
+  color: #6E6E6E;
+  border-bottom: 1px solid #6E6E6E;
+}
+@media screen and (min-width: 720px) {
+  .dark a.text-link:hover {
+    border-bottom: 1px solid #6E6E6E;
+  }
+}
+.dark .underline {
+  display: inline-block;
+  border-bottom: 1px solid #E5E6E6;
+}
+.dark .button {
+  display: inline-block;
+  border: 1px solid #E5E6E6;
+  padding: 8px 30px 10px 30px;
+  border-radius: 30px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.dark .button:hover {
+  border: 1px solid #E5E6E6;
+  background-color: #E5E6E6;
+  border-radius: 30px;
+  color: #1A1A1A;
+}
+
+#dark {
+  background-color: #1A1A1A;
+  color: #E5E6E6;
+}

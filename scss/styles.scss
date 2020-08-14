@@ -124,6 +124,7 @@ figcaption {
     margin: 8px 0 0 0;
 }
 
+
 //links and buttons
 
 a.underline-link
@@ -594,4 +595,66 @@ iframe{
     position: absolute;
     top: 0;
     right: 0;
+}
+
+//dark theme
+
+.dark {
+    background-color: $black;
+    color: $gray;
+    
+    a {
+        color: $gray;
+        
+        &:hover {
+            color: $gray;
+        }
+    }
+    
+    a.underline-link:before {
+        background-color: $gray;
+    }
+    
+    a.text-link {
+        padding-bottom: 2px;
+        border-bottom: 1px solid $gray;
+        transition: all 0.2s ease-in-out;
+        
+        @media screen and (min-width: $break-tablet) {
+            border-bottom: 1px solid $gray;
+          }
+    }
+
+    a.text-link:hover {
+        color: $gray-mid;
+        border-bottom: 1px solid $gray-mid;
+        @media screen and (min-width: $break-tablet) {
+            border-bottom: 1px solid $gray-mid;
+      }
+    }
+
+    .underline {
+        display: inline-block;
+        border-bottom: 1px solid $gray;
+    }
+
+    .button {
+        display: inline-block;
+        border: 1px solid $gray;
+        padding: 8px 30px 10px 30px;
+        border-radius: 30px;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .button:hover {
+        border: 1px solid $gray;
+        background-color: $gray;
+        border-radius: 30px;
+        color: $black;
+    }
+}
+
+#dark {
+    background-color: $black;
+    color: $gray;
 }
