@@ -279,14 +279,6 @@ a.text-link:hover {
 }
 
 //homepage
-.draw-iframe {
-    height: 80%;
-    width: 100%;
-    @media screen and (min-width: $break-tablet) {
-        height: 100%;
-        width: 100%;
-  }
-}
 
 .drawing-instructions {
     display: grid;
@@ -301,8 +293,8 @@ a.text-link:hover {
         align-self: end;
     }
     @media screen and (min-width: $break-tablet) {
-        margin-top: -60px;
-        padding-bottom: 60px;
+        margin-top: 5vh;
+        padding-bottom: 0;
   }
 }
 
