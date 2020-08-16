@@ -279,17 +279,31 @@ a.text-link:hover {
 }
 
 //homepage
+.draw-iframe {
+    height: 80%;
+    width: 100%;
+    @media screen and (min-width: $break-tablet) {
+        height: 100%;
+        width: 100%;
+  }
+}
+
 .drawing-instructions {
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
     justify-content: center;
     flex-direction: row;
     margin-top: -60px;
+    padding-bottom: 60px;
     p {
         grid-column: 2 / 3;
         text-align: center;
         align-self: end;
     }
+    @media screen and (min-width: $break-tablet) {
+        margin-top: -60px;
+        padding-bottom: 60px;
+  }
 }
 
 .arrow-down {
