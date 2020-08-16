@@ -12,7 +12,7 @@ $(document).ready(function () {
     inDuration: 1000,
     outDuration: 500,
     //linkElement: '.fade-link',
-    linkElement: 'a:not([target="_blank"]):not([href^="#"]):not(.next):not(.prev)',
+    linkElement: 'a:not([target="_blank"]):not([href^="#"]):not(.no-fade)',
     loading: true,
     loadingParentElement: 'body', //animsition wrapper element
     loadingClass: 'animsition-loading',

@@ -380,8 +380,7 @@ a.text-link:hover {
     grid-column: 1 / 5;
     grid-row: 2 / 3;
     @media screen and (min-width: $break-tablet) {
-        grid-column: 1 / 5;
-        grid-row: 3 / 4;
+        grid-column: 7 / 12;
         margin-top: 12px;
   }
 }
@@ -462,12 +461,15 @@ a.text-link:hover {
 
 .text-column-1 {
     grid-column: 1 / 7;
+    margin-top: 16px;
     
     @media screen and (min-width: $break-tablet) {
         grid-column: 7 / 13;
+        margin-top: 20px;
     }
     @media screen and (min-width: $break-desktop) {
         grid-column: 7 / 10;
+        margin-top: 24px;
     }
 }
 
@@ -478,6 +480,7 @@ a.text-link:hover {
     }
     @media screen and (min-width: $break-desktop) {
         grid-column: 10 / 13;
+        margin-top: 24px;
     }
 }
 
