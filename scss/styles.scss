@@ -17,6 +17,9 @@ $gray-mid: #6E6E6E;
 }
 
 //regular styling
+html {
+    scroll-behavior: smooth;
+}
 
 body{
     background-color: $gray;
@@ -522,21 +525,14 @@ a.text-link:hover {
 .thumbnails-span-2 {
     margin-top: 16px;
     align-self: start;
-    figure:nth-child(odd) {
-        grid-column: 1 / 4;
-        //cursor: pointer;
-    }
-    figure:nth-child(even) {
-        grid-column: 4 / 7;
+    figure {
+        grid-column: 1 / 7;
         //cursor: pointer;
     }
     @media screen and (min-width: $break-tablet) {
         row-gap: 12px;
         margin-top: 24px;
-        figure:nth-child(odd) {
-            grid-column: auto / span 2;
-        }
-        figure:nth-child(even) {
+        figure {
             grid-column: auto / span 2;
         }
     }

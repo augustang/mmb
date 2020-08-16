@@ -3,6 +3,10 @@
   src: url("../fonts/Roobert-Medium.eot");
   src: url("../fonts/Roobert-Medium.woff2") format("embedded-opentype"), url("../fonts/Roobert-Medium.woff2") format("woff2"), url("../fonts/Roobert-Medium.woff") format("woff");
 }
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #E5E6E6;
   color: #1A1A1A;
@@ -749,25 +753,17 @@ a.text-link:hover {
       -ms-grid-row-align: start;
       align-self: start;
 }
-.thumbnails-span-2 figure:nth-child(odd) {
+.thumbnails-span-2 figure {
   -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
-  grid-column: 1/4;
-}
-.thumbnails-span-2 figure:nth-child(even) {
-  -ms-grid-column: 4;
-  -ms-grid-column-span: 3;
-  grid-column: 4/7;
+  -ms-grid-column-span: 6;
+  grid-column: 1/7;
 }
 @media screen and (min-width: 720px) {
   .thumbnails-span-2 {
     row-gap: 12px;
     margin-top: 24px;
   }
-  .thumbnails-span-2 figure:nth-child(odd) {
-    grid-column: auto/span 2;
-  }
-  .thumbnails-span-2 figure:nth-child(even) {
+  .thumbnails-span-2 figure {
     grid-column: auto/span 2;
   }
 }
