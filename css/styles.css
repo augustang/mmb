@@ -1,7 +1,7 @@
 @font-face {
   font-family: "Roobert-Medium";
   src: url("../fonts/Roobert-Medium.eot");
-  src: url("../fonts/Roobert-Medium.woff2") format("embedded-opentype"), url("webfont.woff2") format("woff2"), url("../fonts/Roobert-Medium.woff") format("woff");
+  src: url("../fonts/Roobert-Medium.woff2") format("embedded-opentype"), url("../fonts/Roobert-Medium.woff2") format("woff2"), url("../fonts/Roobert-Medium.woff") format("woff");
 }
 body {
   background-color: #E5E6E6;
@@ -352,8 +352,8 @@ a.text-link:hover {
 .drawing-instructions {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 4fr 1fr;
+  grid-template-columns: 1fr 4fr 1fr;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -361,7 +361,7 @@ a.text-link:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin-top: -5vh;
+  margin-top: -60px;
 }
 .drawing-instructions p {
   -ms-grid-column: 2;
@@ -501,6 +501,26 @@ a.text-link:hover {
     -ms-grid-column: 7;
     -ms-grid-column-span: 4;
     grid-column: 7/11;
+  }
+}
+
+.project-link-5 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1/5;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+}
+@media screen and (min-width: 720px) {
+  .project-link-5 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1/5;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3/4;
+    margin-top: 12px;
   }
 }
 
@@ -965,6 +985,9 @@ a.text-link:hover {
 .menu ul {
   list-style: none;
   padding: 12px 0;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 .menu ul li {
   display: inline-block;

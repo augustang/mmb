@@ -12,7 +12,7 @@ $gray-mid: #6E6E6E;
     font-family: 'Roobert-Medium';
     src: url('../fonts/Roobert-Medium.eot');
     src: url('../fonts/Roobert-Medium.woff2') format('embedded-opentype'),
-       url('webfont.woff2') format('woff2'),
+       url('../fonts/Roobert-Medium.woff2') format('woff2'),
        url('../fonts/Roobert-Medium.woff') format('woff'),
 }
 
@@ -278,10 +278,10 @@ a.text-link:hover {
 //homepage
 .drawing-instructions {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 4fr 1fr;
     justify-content: center;
     flex-direction: row;
-    margin-top: -5vh;
+    margin-top: -60px;
     p {
         grid-column: 2 / 3;
         text-align: center;
@@ -364,6 +364,16 @@ a.text-link:hover {
     grid-column: 3 / 7;
     @media screen and (min-width: $break-tablet) {
         grid-column: 7 / 11;
+  }
+}
+
+.project-link-5 {
+    grid-column: 1 / 5;
+    grid-row: 2 / 3;
+    @media screen and (min-width: $break-tablet) {
+        grid-column: 1 / 5;
+        grid-row: 3 / 4;
+        margin-top: 12px;
   }
 }
 
@@ -695,6 +705,8 @@ a.text-link:hover {
 .menu ul {
     list-style: none;
     padding: 12px 0;
+    align-items: baseline;
+    
     li {
         display: inline-block;
         //background-color: aqua;
