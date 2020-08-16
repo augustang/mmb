@@ -424,21 +424,6 @@ a.text-link:hover {
     }
 }
 
-.landscape-imgs-2 {
-    figure:nth-child(odd) {
-        grid-column: 1 / 7;
-        @media screen and (min-width: $break-tablet) {
-            grid-column: 1 / 12;
-      }
-    }
-    figure:nth-child(even) {
-        grid-column: 1 / 7;
-        @media screen and (min-width: $break-tablet) {
-            grid-column: 2 / 13;
-      }
-    }
-}
-
 .portrait-1 {
     grid-column: 1 / 7;
     @media screen and (min-width: $break-tablet) {
