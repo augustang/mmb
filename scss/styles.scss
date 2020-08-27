@@ -157,6 +157,22 @@ a.underline-link:hover:before {
     width: 100%;
 }
 
+.h3{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 130%;
+    margin: 0;
+    @media screen and (min-width: $break-tablet) {
+        font-size: 24px;
+        //line-height: 125%;
+  }
+    @media screen and (min-width: $break-desktop) {
+        font-size: 28px;
+        //line-height: 120%;
+  }
+}
+
 /*i know that this all transition is creating issues when resizing browser - come back later*/
 a.text-link {
     padding-bottom: 2px;
